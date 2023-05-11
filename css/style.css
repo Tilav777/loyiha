@@ -1,0 +1,199 @@
+*::after, *::before, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+html, body {
+    overflow-x: hidden;
+}
+
+
+/* Header css */
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo a{
+    color: #7000ff;
+    font-size: 24px;
+    font-weight: 900;
+}
+.logo a span {
+    color: rgb(189, 55, 55);
+}
+
+.user-panel {
+    display: flex;
+    gap: 20px;
+}
+
+.user-panel li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+}
+
+.header-nav__search {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.header-nav__search input {
+    height: 100%;
+    width: 90%;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    margin-right: 16px;
+    outline: none;
+    padding: 8px 15px;
+}
+
+/* Header menu css */
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-menu li a {
+    font-size: 16px;
+    transition: color 0.2s linear;
+    font-weight: 100;
+    color: #747171;
+}
+
+.header-menu li a:hover {
+    color: #000;
+}
+.header-menu__item {
+    display: flex;
+    align-items: center;
+}
+
+/* Svimming-slide  css*/
+
+.svimming-slide {
+    display: flex;
+    scrollbar-width: none;
+    border-radius: 10px;
+}
+
+.svimming-slide__item {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    animation-name: oxes-anim;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    position: relative;
+}
+.svimming-slide::after {
+    content: "Aksiya Super narx: 25 000 000 so'm";
+    position: absolute;
+    background-color: yellow;
+    width: 100%;
+    height: 40px;
+    color: red;
+    font-size: 26px;
+    bottom: 0;
+}
+
+@keyframes oxes-anim {
+    0% {
+        transform: translateX(1200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.svimming-slide {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.svimming-slide svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    color: #ccc;
+    background-color: #726e6e;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.svimming-slide svg:nth-child(1) {
+    left: -25px;
+}
+.svimming-slide svg:nth-child(3) {
+    right: -25px;
+}
+
+/* Discounts css */
+
+.discounts__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.discounts__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 10px;
+}
+
+.discounts__item {
+    width: 22%;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.discounts__item img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.discounts__item p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.discounts__item span:nth-child(3) {
+    background-color: yellow;
+    max-width: max-content;
+    margin-bottom: 10px;
+}
